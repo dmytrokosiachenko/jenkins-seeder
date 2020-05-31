@@ -13,9 +13,6 @@ tool:
               installers:
                 - maven:
                     id: "3.5.4"
-plugins:
-  gitea: "1.2.0"
-  AnsiColor: "0.7.0"
 jobs:
   - script: >
       multibranchPipelineJob('temperature-watcher') {
