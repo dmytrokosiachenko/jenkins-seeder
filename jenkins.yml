@@ -3,16 +3,16 @@ jenkins:
 tool:
   git:
     installations:
-    - home: "git"
-      name: "Default"
+      - home: "git"
+        name: "Default"
   maven:
     installations:
-    - name: "Maven 3"
-      properties:
-      - installSource:
-          installers:
-            - maven:
-                id: "3.5.4"
+      - name: "Maven 3"
+        properties:
+          - installSource:
+              installers:
+                - maven:
+                    id: "3.5.4"
 jobs:
   - script: >
       multibranchPipelineJob('temperature-watcher') {
@@ -21,4 +21,5 @@ jobs:
                 id = 'temperature-watcher'
                 remote('ssh://git@openmediavault.local:222/dmytro/temperature-watcher.git')
                 }
-      }
+        }
+        }
