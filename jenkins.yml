@@ -19,8 +19,8 @@ jobs:
         branchSources {
                 git {
                 id = 'temperature-watcher'
-                remote('ssh://git@openmediavault.local:222/dmytro/temperature-watcher.git')
+                remote('ssh://git@192.168.1.179:222/dmytro/temperature-watcher.git')
                 credentialsId('gitea')
-                }
-        }
-        }
+                    }
+                      }
+                                                    }
