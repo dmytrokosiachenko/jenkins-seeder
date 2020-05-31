@@ -13,13 +13,16 @@ tool:
               installers:
                 - maven:
                     id: "3.5.4"
+plugins:
+  gitea: "1.2.0"
+  AnsiColor: "0.7.0"
 jobs:
   - script: >
       multibranchPipelineJob('temperature-watcher') {
         branchSources {
                 git {
                 id = 'temperature-watcher'
-                remote('ssh://git@192.168.1.179:222/dmytro/temperature-watcher.git')
+                remote('ssh://git@infra_git_1:22/dmytro/temperature-watcher.git')
                 credentialsId('gitea')
                     }
                       }
