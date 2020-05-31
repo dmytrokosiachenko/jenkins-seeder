@@ -20,6 +20,7 @@ jobs:
                 git {
                 id = 'temperature-watcher'
                 remote('ssh://git@openmediavault.local:222/dmytro/temperature-watcher.git')
+                credentialsId('gitea')
                 }
         }
         }
