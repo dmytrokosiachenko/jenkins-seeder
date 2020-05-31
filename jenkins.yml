@@ -1,12 +1,24 @@
 jenkins:
-  systemMessage: "Seeder Job"
+  systemMessage: "AutomatingGuy demo: configured automatically with JCasC plugin\n\n"
+tool:
+  git:
+    installations:
+    - home: "git"
+      name: "Default"
+  maven:
+    installations:
+    - name: "Maven 3"
+      properties:
+      - installSource:
+          installers:
+            - maven:
+                id: "3.5.4"
 jobs:
   - script: >
-        multibranchPipelineJob('temperature-watcher') {
+      multibranchPipelineJob('temperature-watcher') {
         branchSources {
                 git {
                 id = 'temperature-watcher'
                 remote('ssh://git@openmediavault.local:222/dmytro/temperature-watcher.git')
                 }
       }
-}
