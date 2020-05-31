@@ -1,5 +1,5 @@
 jenkins:
-  systemMessage: "AutomatingGuy demo: configured automatically with JCasC plugin\n\n"
+  systemMessage: "Seeder job"
 tool:
   git:
     installations:
